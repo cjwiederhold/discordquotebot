@@ -1,3 +1,4 @@
+require('dotenv').config();
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const Quote = require('./quote')
@@ -88,8 +89,8 @@ client.on('message', msg => {
         }
     }
 });
-    
-client.login('NzAzNDMwODYxMTM5NDc2NTEx.XqOfNw.RrvlwwTcgB3ntri5csH9SohggLk');
+
+client.login(process.env.DISCORD_API);
     
     
     //     const myQuote = new Quote({
